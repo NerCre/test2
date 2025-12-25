@@ -953,7 +953,7 @@ function onJudge(shouldSave) {
       editingExitId = null;
       // listbox は自動で先頭が選択されることがあるため、明示的に未選択へ
       try { elExitSelect.selectedIndex = -1; } catch (_) {}
-      if (elExitDetailsMain) elExitDetailsMain.innerHTML = `<p class="muted">左のリストからトレードを選択してください。</p>`;
+      if (elExitDetailsMain) elExitDetailsMain.innerHTML = `<p class="muted">リストからトレードを選択してください。</p>`;
       if (elExitDetailsSide) elExitDetailsSide.innerHTML = ``;
       if (elExitProfitWide) {
         elExitProfitWide.hidden = true;
@@ -1910,7 +1910,7 @@ function safeRenderStats() {
       selectedExitId = elExitSelect.value || null;
       if (!selectedExitId) {
         editingExitId = null;
-        if (elExitDetailsMain) elExitDetailsMain.innerHTML = `<p class="muted">左のリストからトレードを選択してください。</p>`;
+        if (elExitDetailsMain) elExitDetailsMain.innerHTML = `<p class="muted">リストからトレードを選択してください。</p>`;
         if (elExitDetailsSide) elExitDetailsSide.innerHTML = ``;
         updateExitEditUI();
         return;
