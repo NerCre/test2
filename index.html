@@ -70,13 +70,13 @@
 
           <label>時間足
             <select id="entry-timeframe">
-              <option value="1分">1分</option>
-              <option value="5分">5分</option>
-              <option value="15分">15分</option>
-              <option value="30分">30分</option>
-              <option value="1時間" selected>1時間</option>
-              <option value="4時間">4時間</option>
-              <option value="日足">日足</option>
+              <option value="1m">1分</option>
+              <option value="5m">5分</option>
+              <option value="15m">15分</option>
+              <option value="30m">30分</option>
+              <option value="1h" selected>1時間</option>
+              <option value="4h">4時間</option>
+              <option value="1d">日足</option>
             </select>
           </label>
 
@@ -119,20 +119,20 @@
           <label>TP種別 <span class="req">必須</span>
             <select id="entry-tpType" required>
               <option value="" selected>（未選択）</option>
-              <option value="HBOP">HBOP</option>
-              <option value="R2">R2</option>
-              <option value="R1">R1</option>
-              <option value="pivot">pivot</option>
-              <option value="S1">S1</option>
-              <option value="S2">S2</option>
-              <option value="LBOP">LBOP</option>
-              <option value="直近高値">直近高値</option>
-              <option value="直近安値">直近安値</option>
-              <option value="0.5ATR">0.5ATR</option>
-              <option value="0.25ATR">0.25ATR</option>
-              <option value="EMA200">EMA200</option>
-              <option value="設定なし">設定なし</option>
-              <option value="その他">その他</option>
+              <option value="TP_HBOP">HBOP</option>
+              <option value="TP_R2">R2</option>
+              <option value="TP_R1">R1</option>
+              <option value="TP_pivot">pivot</option>
+              <option value="TP_S1">S1</option>
+              <option value="TP_S2">S2</option>
+              <option value="TP_LBOP">LBOP</option>
+              <option value="TP_RecentHigh">直近高値</option>
+              <option value="TP_RecentLow">直近安値</option>
+              <option value="TP_0.5ATR">0.5ATR</option>
+              <option value="TP_0.25ATR">0.25ATR</option>
+              <option value="TP_EMA200">EMA200</option>
+              <option value="TP_NoSetting">設定なし</option>
+              <option value="TP_Others">その他</option>
             </select>
           </label>
           <label id="entry-tpType-other-wrap" class="subfield" hidden>TP種別（その他）
@@ -142,20 +142,20 @@
           <label>LS種別 <span class="req">必須</span>
             <select id="entry-lsType" required>
               <option value="" selected>（未選択）</option>
-              <option value="HBOP">HBOP</option>
-              <option value="R2">R2</option>
-              <option value="R1">R1</option>
-              <option value="pivot">pivot</option>
-              <option value="S1">S1</option>
-              <option value="S2">S2</option>
-              <option value="LBOP">LBOP</option>
-              <option value="直近高値">直近高値</option>
-              <option value="直近安値">直近安値</option>
-              <option value="0.5ATR">0.5ATR</option>
-              <option value="0.25ATR">0.25ATR</option>
-              <option value="EMA200">EMA200</option>
-              <option value="設定なし">設定なし</option>
-              <option value="その他">その他</option>
+              <option value="LS_HBOP">HBOP</option>
+              <option value="LS_R2">R2</option>
+              <option value="LS_R1">R1</option>
+              <option value="LS_pivot">pivot</option>
+              <option value="LS_S1">S1</option>
+              <option value="LS_S2">S2</option>
+              <option value="LS_LBOP">LBOP</option>
+              <option value="LS_RecentHigh">直近高値</option>
+              <option value="LS_RecentLow">直近安値</option>
+              <option value="LS_0.5ATR">0.5ATR</option>
+              <option value="LS_0.25ATR">0.25ATR</option>
+              <option value="LS_EMA200">EMA200</option>
+              <option value="LS_NoSetting">設定なし</option>
+              <option value="LS_Others">その他</option>
             </select>
           </label>
           <label id="entry-lsType-other-wrap" class="subfield" hidden>LS種別（その他）
@@ -174,13 +174,13 @@
           <label>波動ライン
             <select id="ind-waveCount">
               <option value="" selected>（未選択）</option>
-              <option value="W1">第1波</option>
-              <option value="W2">第2波</option>
-              <option value="W3">第3波</option>
-              <option value="W4">第4波</option>
-              <option value="W5">第5波</option>
-              <option value="W6">第6波</option>
-              <option value="W7">第7波～</option>
+              <option value="Wave1">第1波</option>
+              <option value="Wave2">第2波</option>
+              <option value="Wave3">第3波</option>
+              <option value="Wave4">第4波</option>
+              <option value="Wave5">第5波</option>
+              <option value="Wave6">第6波</option>
+              <option value="Wave7">第7波～</option>
               <option value="unknown">非成立</option>
             </select>
           </label>
@@ -207,11 +207,11 @@
             </select>
           </label>
 
-          <label>価格 vs EMA200
+          <label>EMA200
             <select id="ind-price_vs_ema200">
               <option value="" selected>（未選択）</option>
-              <option value="above">上</option>
-              <option value="below">下</option>
+              <option value="above_price">価格が上</option>
+              <option value="below_price">価格が下</option>
             </select>
           </label>
 
@@ -252,20 +252,20 @@
           <label>CMF実数
             <select id="ind-cmf_sign">
               <option value="" selected>（未選択）</option>
-              <option value="positive">プラス圏</option>
-              <option value="near_zero">0付近</option>
-              <option value="negative">マイナス圏</option>
+              <option value="CMF_positive">プラス圏</option>
+              <option value="CMF_nearZero">0付近</option>
+              <option value="CMF_negative">マイナス圏</option>
             </select>
           </label>
 
           <label>CMF SMA hist
             <select id="ind-cmf_sma">
               <option value="" selected>（未選択）</option>
-              <option value="up">上昇</option>
-              <option value="gc">GoldCross</option>
-              <option value="flat">横ばい</option>
-              <option value="dc">DeadCross</option>
-              <option value="down">下降</option>
+              <option value="CMFh_up">上昇</option>
+              <option value="CMFh_gc">GoldCross</option>
+              <option value="CMFh_flat">横ばい</option>
+              <option value="CMFh_dc">DeadCross</option>
+              <option value="CMFh_down">下降</option>
             </select>
           </label>
 
@@ -281,18 +281,18 @@
           <label>ROC実数
             <select id="ind-roc_sign">
               <option value="" selected>（未選択）</option>
-              <option value="positive">プラス圏</option>
-              <option value="near_zero">0付近</option>
-              <option value="negative">マイナス圏</option>
+              <option value="ROC_positive">プラス圏</option>
+              <option value="ROC_nearZero">0付近</option>
+              <option value="ROC_negative">マイナス圏</option>
             </select>
           </label>
 
           <label>ROC SMA hist
             <select id="ind-roc_sma">
               <option value="" selected>（未選択）</option>
-              <option value="up">上昇</option>
-              <option value="flat">横ばい</option>
-              <option value="down">下降</option>
+              <option value="ROCh_up">上昇</option>
+              <option value="ROCh_flat">横ばい</option>
+              <option value="ROCh_down">下降</option>
             </select>
           </label>
 
@@ -319,8 +319,8 @@
           <label>トレード手法
             <select id="entry-tradeMethod">
               <option value="" selected>（未選択）</option>
-              <option value="順張り">順張り</option>
-              <option value="逆張り">逆張り</option>
+              <option value="orderly">順張り</option>
+              <option value="contrarian">逆張り</option>
             </select>
           </label>
 
@@ -451,13 +451,13 @@
         <label>時間足
           <select id="filter-timeframe">
             <option value="">（全て）</option>
-            <option value="1分">1分</option>
-            <option value="5分">5分</option>
-            <option value="15分">15分</option>
-            <option value="30分">30分</option>
-            <option value="1時間">1時間</option>
-            <option value="4時間">4時間</option>
-            <option value="日足">日足</option>
+            <option value="1m">1分</option>
+            <option value="5m">5分</option>
+            <option value="15m">15分</option>
+            <option value="30m">30分</option>
+            <option value="1h">1時間</option>
+            <option value="4h">4時間</option>
+            <option value="1d">日足</option>
           </select>
         </label>
 
@@ -483,13 +483,13 @@
         <label>エントリー曜日
           <select id="filter-weekday">
             <option value="">（全て）</option>
-            <option value="月">月</option>
-            <option value="火">火</option>
-            <option value="水">水</option>
-            <option value="木">木</option>
-            <option value="金">金</option>
-            <option value="土">土</option>
-            <option value="日">日</option>
+            <option value="月">月曜日</option>
+            <option value="火">火曜日</option>
+            <option value="水">水曜日</option>
+            <option value="木">木曜日</option>
+            <option value="金">金曜日</option>
+            <option value="土">土曜日</option>
+            <option value="日">日曜日</option>
           </select>
         </label>
 
@@ -504,8 +504,8 @@
         <label>トレード手法
           <select id="filter-tradeMethod">
             <option value="">（全て）</option>
-            <option value="順張り">順張り</option>
-            <option value="逆張り">逆張り</option>
+            <option value="orderly">順張り</option>
+            <option value="contrarian">逆張り</option>
           </select>
         </label>
 
@@ -525,38 +525,38 @@
         <label>TP種別
           <select id="filter-tpType">
             <option value="">（全て）</option>
-            <option value="HBOP">HBOP</option>
-            <option value="R2">R2</option>
-            <option value="R1">R1</option>
-            <option value="pivot">pivot</option>
-            <option value="S1">S1</option>
-            <option value="S2">S2</option>
-            <option value="LBOP">LBOP</option>
-            <option value="直近高値">直近高値</option>
-            <option value="直近安値">直近安値</option>
-            <option value="0.5ATR">0.5ATR</option>
-            <option value="0.25ATR">0.25ATR</option>
-            <option value="EMA200">EMA200</option>
-            <option value="設定なし">設定なし</option>
+            <option value="TP_HBOP">HBOP</option>
+            <option value="TP_R2">R2</option>
+            <option value="TP_R1">R1</option>
+            <option value="TP_pivot">pivot</option>
+            <option value="TP_S1">S1</option>
+            <option value="TP_S2">S2</option>
+            <option value="TP_LBOP">LBOP</option>
+            <option value="TP_RecentHigh">直近高値</option>
+            <option value="TP_RecentLow">直近安値</option>
+            <option value="TP_0.5ATR">0.5ATR</option>
+            <option value="TP_0.25ATR">0.25ATR</option>
+            <option value="TP_EMA200">EMA200</option>
+            <option value="TP_NoSetting">設定なし</option>
           </select>
         </label>
 
         <label>LS種別
           <select id="filter-lsType">
             <option value="">（全て）</option>
-            <option value="HBOP">HBOP</option>
-            <option value="R2">R2</option>
-            <option value="R1">R1</option>
-            <option value="pivot">pivot</option>
-            <option value="S1">S1</option>
-            <option value="S2">S2</option>
-            <option value="LBOP">LBOP</option>
-            <option value="直近高値">直近高値</option>
-            <option value="直近安値">直近安値</option>
-            <option value="0.5ATR">0.5ATR</option>
-            <option value="0.25ATR">0.25ATR</option>
-            <option value="EMA200">EMA200</option>
-            <option value="設定なし">設定なし</option>
+            <option value="LS_HBOP">HBOP</option>
+            <option value="LS_R2">R2</option>
+            <option value="LS_R1">R1</option>
+            <option value="LS_pivot">pivot</option>
+            <option value="LS_S1">S1</option>
+            <option value="LS_S2">S2</option>
+            <option value="LS_LBOP">LBOP</option>
+            <option value="LS_RecentHigh">直近高値</option>
+            <option value="LS_RecentLow">直近安値</option>
+            <option value="LS_0.5ATR">0.5ATR</option>
+            <option value="LS_0.25ATR">0.25ATR</option>
+            <option value="LS_EMA200">EMA200</option>
+            <option value="LS_NoSetting">設定なし</option>
           </select>
         </label>
 
@@ -660,7 +660,7 @@
       <button type="button" id="btnExportJson" class="btn-primary">JSONエクスポート</button>
       <button type="button" id="btnImportJson" class="btn-ghost">JSONインポート</button>
       <input type="file" id="import-file" accept=".json" style="display:none">
-      <button type="button" id="btnExportCsv" class="btn-accent">CSVエクスポート（画像なし）</button>
+      <button type="button" id="btnExportCsv" class="btn-accent">CSVエクスポート</button>
     </div>
     <p class="muted small">スマホ→PC は「JSONエクスポート → PCでJSONインポート」。CSVは数値・文字データのみを出力します。</p>
   </div>
