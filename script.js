@@ -2050,8 +2050,6 @@ $("#entry-price").value = r.entryPrice ?? "";
 
     // 判定結果は「判定する」or「判定して保存」を押した時だけ表示
     resetJudgeOutput();
-
-    showError(elEntryError, "編集モード：変更したら「判定してエントリーを保存」で上書き保存します。");
   }
 
   function deleteRecord(id) {
